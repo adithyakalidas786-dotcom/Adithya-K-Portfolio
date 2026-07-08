@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Adithya K - 3rd Year B.Tech Information Technology Student. Aspiring Full-Stack Developer showcasing projects, skills, and learning journey.">
+    <meta name="keywords" content="portfolio, full-stack, developer, b.tech, student, web development">
+    <meta name="author" content="Adithya K">
+    <meta name="theme-color" content="#00BFFF">
+    
+    <title>Adithya K - Full-Stack Developer | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading</div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particles" id="particlesContainer"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Adithya</span>
+                <span class="logo-dot">.</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#timeline" class="nav-link">Journey</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Adithya</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor"></span>
+                </p>
+                <p class="hero-description">
+                    3rd Year B.Tech Information Technology Student | Aspiring Full-Stack Developer
+                </p>
+                <p class="hero-intro">
+                    I'm passionate about building elegant, interactive web applications while continuously learning modern technologies. Focused on solving real-world problems through code and exploring the full spectrum of web development.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary magnetic-btn">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary magnetic-btn">Contact Me</a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="profile-image-container">
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Profile" class="profile-image">
+                    </div>
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse-wheel"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know me better</p>
+
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h3>Passionate Learner & Developer</h3>
+                    <p>
+                        I'm a 3rd Year B.Tech Information Technology student with a deep passion for full-stack web development. I'm actively learning and exploring modern web technologies to build scalable, user-friendly applications.
+                    </p>
+                    <p>
+                        My journey in programming has been driven by curiosity and the desire to solve real-world problems. I believe in continuous learning and regularly push myself to master new technologies and best practices in web development.
+                    </p>
+                    <p>
+                        Beyond coding, I'm interested in UI/UX principles, clean code architecture, and creating seamless user experiences. I actively work on projects to apply my knowledge and collaborate with others to enhance my skills.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div>
+                                <h4>Problem Solving</h4>
+                                <p>Strong analytical skills and logical thinking</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📚</div>
+                            <div>
+                                <h4>Continuous Learning</h4>
+                                <p>Always exploring new technologies and frameworks</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🚀</div>
+                            <div>
+                                <h4>Project Building</h4>
+                                <p>Hands-on experience through practical projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats reveal">
+                    <div class="stat-card glass">
+                        <div class="stat-number counter" data-target="12">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-number counter" data-target="1000">0</div>
+                        <div class="stat-label">Hours of Learning</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-number counter" data-target="8">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-number counter" data-target="3">0</div>
+                        <div class="stat-label">Years of College</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Tools and languages I work with</p>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 85%"></div>
+                                </div>
+                                <span class="level-text">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 80%"></div>
+                                </div>
+                                <span class="level-text">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 85%"></div>
+                                </div>
+                                <span class="level-text">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">SQL</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 75%"></div>
+                                </div>
+                                <span class="level-text">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 70%"></div>
+                                </div>
+                                <span class="level-text">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML5</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 90%"></div>
+                                </div>
+                                <span class="level-text">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">CSS3</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 90%"></div>
+                                </div>
+                                <span class="level-text">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript DOM</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 85%"></div>
+                                </div>
+                                <span class="level-text">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Responsive Design</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 90%"></div>
+                                </div>
+                                <span class="level-text">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Backend (Learning)</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">Node.js <span class="badge">Learning</span></div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 60%"></div>
+                                </div>
+                                <span class="level-text">60%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Express.js <span class="badge">Learning</span></div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 55%"></div>
+                                </div>
+                                <span class="level-text">55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Database</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">MySQL</div>
+                            <div class="skill-level">
+                                <div class="level-bar">
+                                    <div class="level-fill" style="--level: 80%"></div>
+                                </div>
+                                <span class="level-text">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools and Platforms -->
+                <div class="skill-category reveal">
+                    <h3 class="category-title">Tools & Platforms</h3>
+                    <div class="skills-badges">
+                        <span class="badge-skill">Git</span>
+                        <span class="badge-skill">GitHub</span>
+                        <span class="badge-skill">VS Code</span>
+                        <span class="badge-skill">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcasing my work and learning</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal tilt">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/00BFFF/001a33?text=Portfolio+Website" alt="Portfolio Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com" target="_blank" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 16 16 12 12 8"/>
+                                    <polyline points="8 12 12 16 16 12"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">A responsive, modern portfolio website built with HTML5, CSS3, and Vanilla JavaScript featuring dynamic animations and glassmorphism design.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal tilt">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/00BFFF/001a33?text=Weather+App" alt="Weather Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com" target="_blank" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 16 16 12 12 8"/>
+                                    <polyline points="8 12 12 16 16 12"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Weather Application</h3>
+                        <p class="project-description">Real-time weather app using OpenWeather API with dynamic backgrounds, current conditions, and 5-day forecasts for multiple locations.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">API</span>
+                            <span class="tech-badge">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal tilt">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/00BFFF/001a33?text=Student+Management" alt="Student Management Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com" target="_blank" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 16 16 12 12 8"/>
+                                    <polyline points="8 12 12 16 16 12"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Student Management System</h3>
+                        <p class="project-description">Full-stack application for managing student records with CRUD operations, built with Node.js, Express, and MySQL database.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal tilt">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/00BFFF/001a33?text=Todo+App" alt="Todo App Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com" target="_blank" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 16 16 12 12 8"/>
+                                    <polyline points="8 12 12 16 16 12"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">To-Do Application</h3>
+                        <p class="project-description">Task management app with local storage persistence, drag-and-drop functionality, and intuitive UI with smooth animations.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">LocalStorage</span>
+                            <span class="tech-badge">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="section-container">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">My academic journey</p>
+
+            <div class="education-card reveal glass">
+                <div class="education-icon">🎓</div>
+                <div class="education-content">
+                    <h3>B.Tech Information Technology</h3>
+                    <p class="education-school">Your College Name, Location</p>
+                    <div class="education-meta">
+                        <span class="meta-item">
+                            <strong>Year:</strong> 3rd Year
+                        </span>
+                        <span class="meta-item">
+                            <strong>CGPA:</strong> 8.5/10
+                        </span>
+                        <span class="meta-item">
+                            <strong>Expected Graduation:</strong> 2026
+                        </span>
+                    </div>
+                    <p class="education-description">
+                        Studying core computer science concepts including Data Structures, Algorithms, Database Management Systems, Web Technologies, and Software Engineering. Actively applying theoretical knowledge through practical projects and hands-on learning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Journey Timeline -->
+    <section id="timeline" class="timeline">
+        <div class="section-container">
+            <h2 class="section-title">Learning Journey</h2>
+            <p class="section-subtitle">Milestones in my development journey</p>
+
+            <div class="timeline-content">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-item">
+                        <h3 class="timeline-title">Started Programming</h3>
+                        <p class="timeline-date">Year 1</p>
+                        <p class="timeline-description">Began my programming journey with C and Java, learning fundamental concepts like variables, loops, and object-oriented programming.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-item">
+                        <h3 class="timeline-title">Learned HTML & CSS</h3>
+                        <p class="timeline-date">Year 1 - 2</p>
+                        <p class="timeline-description">Explored web development fundamentals, building static websites and understanding responsive design principles.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-item">
+                        <h3 class="timeline-title">Mastered JavaScript</h3>
+                        <p class="timeline-date">Year 2</p>
+                        <p class="timeline-description">Deep dived into JavaScript, learning DOM manipulation, async programming, and building interactive web applications.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-item">
+                        <h3 class="timeline-title">Started Backend Development</h3>
+                        <p class="timeline-date">Year 2 - 3</p>
+                        <p class="timeline-description">Learning Node.js and Express.js, understanding server-side development, databases, and RESTful APIs.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-item">
+                        <h3 class="timeline-title">Building Full-Stack Projects</h3>
+                        <p class="timeline-date">Year 3 (Current)</p>
+                        <p class="timeline-description">Creating end-to-end applications combining frontend and backend technologies, applying best practices and design patterns.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-item">
+                        <h3 class="timeline-title">Internship & Career Preparation</h3>
+                        <p class="timeline-date">Year 3</p>
+                        <p class="timeline-description">Focusing on interview preparation, competitive programming, and enhancing my portfolio for internship opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="section-container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional development and learning</p>
+
+            <div class="certifications-grid">
+                <div class="cert-card reveal glass">
+                    <div class="cert-icon">📜</div>
+                    <h3 class="cert-title">Web Development Fundamentals</h3>
+                    <p class="cert-issuer">Coursera</p>
+                    <p class="cert-date">Completed - 2024</p>
+                </div>
+
+                <div class="cert-card reveal glass">
+                    <div class="cert-icon">📜</div>
+                    <h3 class="cert-title">JavaScript Advanced Concepts</h3>
+                    <p class="cert-issuer">Udemy</p>
+                    <p class="cert-date">Completed - 2024</p>
+                </div>
+
+                <div class="cert-card reveal glass">
+                    <div class="cert-icon">📜</div>
+                    <h3 class="cert-title">Database Design & SQL</h3>
+                    <p class="cert-issuer">LinkedIn Learning</p>
+                    <p class="cert-date">Completed - 2025</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's connect and collaborate</p>
+
+            <div class="contact-content">
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Your City, Your State, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="About">
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your message..." autocomplete="off"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary magnetic-btn" id="submitBtn">Send Message</button>
+                    <span class="form-message" id="formMessage"></span>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2024 Adithya K. All rights reserved.</p>
+                <p>Built with HTML, CSS & Vanilla JavaScript. Designed with ❤️ for excellence.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
